@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>All trips</title>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:200,300,400,400i,500,600,700,800,900%7CSatisfy&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="assets/css/tripo-icons.css">
+    <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="assets/css/vegas.min.css">
+    <link rel="stylesheet" href="assets/css/nouislider.min.css">
+    <link rel="stylesheet" href="assets/css/nouislider.pips.css">
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+    <div class="preloader">
+        <img src="assets/images/loader.png" class="preloader__image" alt="">
+    </div><!-- /.preloader -->
+    <div class="page-wrapper">
+        <div class="site-header__header-one-wrap">
+           
+            <header class="main-nav__header-one ">
+                <nav class="header-navigation stricky">
+                    <div class="container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="main-nav__logo-box">
+                            <a href="index.html" class="main-nav__logo">
+                                <img src="assets/images/logo-dark.png" class="main-logo" width="180" alt="Logo" />
+                            </a>
+                            <a href="#" class="side-menu__toggler"><i class="fa fa-bars"><img src="assets/images/icons/Menu_Hamburger Menu.svg" class="menuHamburger" alt="hamburgerMenu" style="width: 20px; height: 20px;"/></i>
+                                <!-- /.smpl-icon-menu --></a>
+                        </div><!-- /.logo-box -->
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                       
+                        <div class="main-nav__right">
+                            <select name="languages" id="languages" class="selectpicker">
+                                <option value="ENG" style="color: #366E56;">ENG</option>
+                                <option value="BN" style="color: #366E56;">BN</option>
+                                <option value="RUS" style="color: #366E56;">RUS</option>
+                            </select><!-- /#languages .selectpicker -->
+                            <select name="currency" id="currency" class="selectpicker">
+                                <option value="USD" style="color: #366E56;">EUR</option>
+                                <option value="GBP" style="color: #366E56;">GBP</option>
+                                <option value="AUD" style="color: #366E56;">AUD</option>
+                            </select><!-- /#currency .selectpicker -->
+                            <a href="#" class="main-nav__search search-popup__toggler"><i><img src="assets/images/icons/Menu_Icon search.svg" style="width: 18px; height: 18px;"></i></a>
+                            <a href="#" class="main-nav__search search-popup__toggler"><i><img src="assets/images/icons/Menu_Cart icon with number.svg" style="width: 30px; height: 24px;"></i></a>
+                            <a href="#" class="main-nav__search search-popup__toggler"><i><img src="assets/images/icons/Menu_Hamburger Menu.svg" style="width: 20px; height: 20px;"></i></a>
+                            
+                        </div><!-- /.main-nav__right -->
+                        <div>
+                    </div>
+                    <!-- /.container -->
+                </div>
+                    <div id="containerTwo" class="containerTwo">
+                        <div class="locationDropDown">
+                            <div class="selectpicker">
+                                <button type="button" id="dropdownMenuButtonGuides" data-toggle="dropdown">
+                                  <a>Location</a><i class="fa fa-caret-down"></i>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="width: 284px;" >
+                                  <a class="dropdown-item" href="#">Sarajevo</a>
+                                  <a class="dropdown-item" href="#">Town 2</a>
+                                  <a class="dropdown-item" href="#">Town 3</a>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="typeOfGuideDropDown">
+                            <div class="selectpicker">
+                                <button type="button" id="dropdownMenuButtonGuides" data-toggle="dropdown">
+                                    <a>Type of guides</a><i class="fa fa-caret-down"></i>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="width: 284px;">
+                                  <a class="dropdown-item" href="#">Top 10 destinations</a>
+                                  <a class="dropdown-item" href="#">Best destinations</a>
+                                  <a class="dropdown-item" href="#">Bloggers recommend</a>
+                                  <a class="dropdown-item" href="#">Tour guides recommend</a>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="activityDropDown">
+                            <div class="selectpicker">
+                                <button type="button" id="dropdownMenuButtonGuides" data-toggle="dropdown">
+                                  <a>Activity</a><i class="fa fa-caret-down"></i>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="width: 284px;" >
+                                  <a class="dropdown-item" href="#">Skiing</a>
+                                  <a class="dropdown-item" href="#">Hiking</a>
+                                  <a class="dropdown-item" href="#">Paragliding</a>
+                                  <a class="dropdown-item" href="#">Climbing</a>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="searchButton">
+                            <Button style="font-size: 14px; font-family: Barlow; color: #F8F6F6;">SEARCH</Button>
+                        </div>
+                    </div>
+                    <div id ="containerThree" class="containerThree">
+                        <div class="typeContainer">    
+                            <div class="selectpicker">
+                                <button type="button" id="containerThreeButton" data-toggle="dropdown">
+                                  <a>Type of</a><i class="fa fa-caret-down"></i>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="width: 284px;" >
+                                  <a class="dropdown-item" href="#">Skiing</a>
+                                  <a class="dropdown-item" href="#">Hiking</a>
+                                  <a class="dropdown-item" href="#">Paragliding</a>
+                                  <a class="dropdown-item" href="#">Climbing</a>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="groupSizeContainer">
+                            <div class="selectpicker">
+                                <button type="button" id="containerThreeButton" data-toggle="dropdown">
+                                    <a>Group size</a><i class="fa fa-caret-down"></i>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="width: 284px;">
+                                  <a class="dropdown-item" href="#">Top 10 destinations</a>
+                                  <a class="dropdown-item" href="#">Best destinations</a>
+                                  <a class="dropdown-item" href="#">Bloggers recommend</a>
+                                  <a class="dropdown-item" href="#">Tour guides recommend</a>
+                                </div>
+                              </div>
+                        
+                            <div class="BudgetContainer">
+                                <div class="selectpicker">
+                                    <button type="button" id="containerThreeButton" data-toggle="dropdown">
+                                        <a>Budget</a><i class="fa fa-caret-down"></i>
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="width: 284px;">
+                                      <a class="dropdown-item" href="#">Top 10 destinations</a>
+                                      <a class="dropdown-item" href="#">Best destinations</a>
+                                      <a class="dropdown-item" href="#">Bloggers recommend</a>
+                                      <a class="dropdown-item" href="#">Tour guides recommend</a>
+                                    </div>
+                                  </div>
+                                  </div>
+                        <div class="sortByContainer">   
+                            <div class="selectpicker">
+                                <button type="button" id="containerThreeButton" data-toggle="dropdown">
+                                    <a>Sort by</a><i class="fa fa-caret-down"></i>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="width: 284px;">
+                                  <a class="dropdown-item" href="#">Top 10 destinations</a>
+                                  <a class="dropdown-item" href="#">Best destinations</a>
+                                  <a class="dropdown-item" href="#">Bloggers recommend</a>
+                                  <a class="dropdown-item" href="#">Tour guides recommend</a>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                
+                </nav>
+            </header><!-- /.site-header -->
+        </div><!-- /.site-header__header-one-wrap -->
+
+        <section class="tour-one" style="padding-top: 60px;" >
+            <div class="container">
+                <div class="block-title" style="position: relative;">
+                    <h4 style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: #386d56;">ALL TRIPS</h4>
+                </div><!-- /.block-title -->
+                <div class="row">
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="tour-one__single">
+                            <div class="tour-one__image" style="background: url('assets/images/foto/SOC_21.jpg'); background-size: cover; background-position: center center; padding-top: 290px">
+                                <div class="tour-one__content" style="background: none; border:  none;">
+                                    <div class="tour-one__stars" style="color: white">
+                                        CATEGORY
+                                    </div><!-- /.tour-one__stars -->
+                                    <h3><a href="tour-basic-info.html" style="color: white">Trip to Visocica</a></h3>
+                                    <p style="color: #f99c35"><span style="color: #f99c35">$1870</span>  per Person</p>
+                                    <ul class="tour-one__meta list-unstyled" style="border: none; padding-top: 0;">
+                                        <li style="color: white"><img src="assets/images/icons/HOME_Group_Size_white.svg" width="30px" height="auto" style="margin-right: 10px;" alt=""> 10-15</li>
+                                    </ul><!-- /.tour-one__meta -->
+                                </div><!-- /.tour-one__content -->
+                            </div><!-- /.tour-one__image -->
+                            
+                        </div><!-- /.tour-one__single -->
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="tour-one__single">
+                            <div class="tour-one__image" style="background: url('assets/images/foto/SOC_10.jpg'); background-size: cover; background-position: center center; padding-top: 290px">
+                                <div class="tour-one__content" style="background: none; border:  none;">
+                                    <div class="tour-one__stars" style="color: white">
+                                        CATEGORY
+                                    </div><!-- /.tour-one__stars -->
+                                    <h3><a href="tour-basic-info.html" style="color: white">Trip to Visocica</a></h3>
+                                    <p style="color: #f99c35"><span style="color: #f99c35">$1870</span>  per Person</p>
+                                    <ul class="tour-one__meta list-unstyled" style="border: none; padding-top: 0;">
+                                        <li style="color: white"><img src="assets/images/icons/HOME_Group_Size_white.svg" width="30px" height="auto" style="margin-right: 10px;" alt=""> 10-15</li>
+                                    </ul><!-- /.tour-one__meta -->
+                                </div><!-- /.tour-one__content -->
+                            </div><!-- /.tour-one__image -->
+                            
+                        </div><!-- /.tour-one__single -->
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="tour-one__single">
+                            <div class="tour-one__image" style="background: url('assets/images/foto/SOC_03.JPG'); background-size: cover; background-position: center center; padding-top: 290px">
+                                <div class="tour-one__content" style="background: none; border:  none;">
+                                    <div class="tour-one__stars" style="color: white">
+                                        CATEGORY
+                                    </div><!-- /.tour-one__stars -->
+                                    <h3><a href="tour-basic-info.html" style="color: white">Trip to Visocica</a></h3>
+                                    <p style="color: #f99c35"><span style="color: #f99c35">$1870</span>  per Person</p>
+                                    <ul class="tour-one__meta list-unstyled" style="border: none; padding-top: 0;">
+                                        <li style="color: white"><img src="assets/images/icons/HOME_Group_Size_white.svg" width="30px" height="auto" style="margin-right: 10px;" alt=""> 10-15</li>
+                                    </ul><!-- /.tour-one__meta -->
+                                </div><!-- /.tour-one__content -->
+                            </div><!-- /.tour-one__image -->
+                            
+                        </div><!-- /.tour-one__single -->
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="tour-one__single">
+                            <div class="tour-one__image" style="background: url('assets/images/foto/SOC_13.jpg'); background-size: cover; background-position: center center; padding-top: 290px">
+                                <div class="tour-one__content" style="background: none; border:  none;">
+                                    <div class="tour-one__stars" style="color: white">
+                                        CATEGORY
+                                    </div><!-- /.tour-one__stars -->
+                                    <h3><a href="tour-basic-info.html" style="color: white">Trip to Visocica</a></h3>
+                                    <p style="color: #f99c35"><span style="color: #f99c35">$1870</span>  per Person</p>
+                                    <ul class="tour-one__meta list-unstyled" style="border: none; padding-top: 0;">
+                                        <li style="color: white"><img src="assets/images/icons/HOME_Group_Size_white.svg" width="30px" height="auto" style="margin-right: 10px;" alt=""> 10-15</li>
+                                    </ul><!-- /.tour-one__meta -->
+                                </div><!-- /.tour-one__content -->
+                            </div><!-- /.tour-one__image -->
+                            
+                        </div><!-- /.tour-one__single -->
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="tour-one__single">
+                            <div class="tour-one__image" style="background: url('assets/images/foto/SOC_26.jpg'); background-size: cover; background-position: center center; padding-top: 290px">
+                                <div class="tour-one__content" style="background: none; border:  none;">
+                                    <div class="tour-one__stars" style="color: white">
+                                        CATEGORY
+                                    </div><!-- /.tour-one__stars -->
+                                    <h3><a href="tour-details.html" style="color: white">Trip to Visocica</a></h3>
+                                    <p style="color: #f99c35"><span style="color: #f99c35">$1870</span>  per Person</p>
+                                    <ul class="tour-one__meta list-unstyled" style="border: none; padding-top: 0;">
+                                        <li style="color: white"><img src="assets/images/icons/HOME_Group_Size_white.svg" width="30px" height="auto" style="margin-right: 10px;" alt=""> 10-15</li>
+                                    </ul><!-- /.tour-one__meta -->
+                                </div><!-- /.tour-one__content -->
+                            </div><!-- /.tour-one__image -->
+                            
+                        </div><!-- /.tour-one__single -->
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="tour-one__single">
+                            <div class="tour-one__image" style="background: url('assets/images/foto/SOC_06.JPG'); background-size: cover; background-position: center center; padding-top: 290px">
+                                <div class="tour-one__content" style="background: none; border:  none;">
+                                    <div class="tour-one__stars" style="color: white">
+                                        CATEGORY
+                                    </div><!-- /.tour-one__stars -->
+                                    <h3><a href="tour-details.html" style="color: white">Trip to Visocica</a></h3>
+                                    <p style="color: #f99c35"><span style="color: #f99c35">$1870</span>  per Person</p>
+                                    <ul class="tour-one__meta list-unstyled" style="border: none; padding-top: 0;">
+                                        <li style="color: white"><img src="assets/images/icons/HOME_Group_Size_white.svg" width="30px" height="auto" style="margin-right: 10px;" alt=""> 10-15</li>
+                                    </ul><!-- /.tour-one__meta -->
+                                </div><!-- /.tour-one__content -->
+                            </div><!-- /.tour-one__image -->
+                            
+                        </div><!-- /.tour-one__single -->
+                    </div><!-- /.col-lg-4 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </section><!-- /.tour-one -->
+
+        <footer class="site-footer">
+            <div class="site-footer__bg" style="background-color: #386d56; opacity: 1;"></div>
+            <!-- /.site-footer__bg -->
+            <div class="container">
+                <div class="row">
+                    <div class="footer-widget__column footer-widget__about">
+                        <a href="index.html" class="footer-widget__logo"><img src="assets/images/logo-light.png" width="123" alt=""></a>
+                        <p style="color: white; font-size: 16px;">&copy; 2021 Sarajevo Outdoor City<br> All rights reserved</p>
+                       
+                    </div><!-- /.footer-widget__column -->
+                    <div class="footer-widget__column footer-widget__links">
+                        <!-- EMPTY -->
+                    </div><!-- /.footer-widget__column -->
+                    <div class="footer-widget__column footer-widget__links">
+                        <h3></h3>
+                        <ul class="footer-widget__links-list list-unstyled">
+                            <li><a style="color: white;" href="destinations.html">ABOUT US</a></li>
+                            <li><a style="color: white;" href="tour-sidebar.html">CART</a></li>
+                            <li><a style="color: white;" href="contact.html">TERMS</a></li>
+                            <li><a style="color: white;" href="gallery.html">PRIVACY POLICY</a></li>
+                        </ul><!-- /.footer-widget__links-list list-unstyled -->
+                    </div><!-- /.footer-widget__column -->
+                    <div class="footer-widget__column footer-widget__gallery">
+                        <h3 style="color: white" class="footer-widget__title">JOIN US</h3><!-- /.footer-widget__title -->
+                        <div class="site-footer__social">
+                            <a style="border: 1px solid white; background-color: transparent; color: white" href="#"><i class="fab fa-facebook-square"></i><!-- /.fab fa-facebook-square --></a>
+                            <a style="border: 1px solid white; background-color: transparent; color: white" href="#"><i class="fab fa-twitter"></i><!-- /.fab fa-twitter --></a>
+                            <a style="border: 1px solid white; background-color: transparent; color: white" href="#"><i class="fab fa-instagram"></i><!-- /.fab fa-instagram --></a>
+                        </div><!-- /.site-footer__social -->
+                    </div><!-- /.footer-widget__column -->
+                    <div class="footer-widget__column footer-widget__options">
+                        <h3 style="color: white; margin-bottom: 10px; font-weight: light;" class="footer-widget__title">NEWSLETTER</h3><!-- /.footer-widget__title -->
+                        <p style="color: white; font-size: 16px; line-height: 20px; margin-bottom: 10px;">Subscribe to receive selected ideas and news for your next trip</p>
+                        <input style="padding: 0 5px; border: 1px solid white; background-color: transparent; color: white; border-radius: 5px;"  type="email" placeholder="email">
+                        
+                    </div><!-- /.footer-widget__column -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </footer><!-- /.site-footer -->
+
+    </div><!-- /.page-wrapper -->
+    <a href="#" data-target="html" style="background-color: #386d56;" class="scroll-to-target scroll-to-top"><i class="fa fa-share-alt"></i></a>
+
+
+    <div class="side-menu__block">
+
+
+        <div class="side-menu__block-overlay custom-cursor__overlay">
+            <div class="cursor"></div>
+            <div class="cursor-follower"></div>
+        </div><!-- /.side-menu__block-overlay -->
+        <div class="side-menu__block-inner ">
+            <div class="side-menu__top justify-content-end">
+
+                <a href="#" class="side-menu__toggler side-menu__close-btn"><img src="assets/images/shapes/close-1-1.png" alt=""></a>
+            </div><!-- /.side-menu__top -->
+
+
+            <nav class="mobile-nav__container">
+                <!-- content is loading via js -->
+            </nav>
+            <div class="side-menu__sep"></div><!-- /.side-menu__sep -->
+            <div class="side-menu__content">
+                <p>Tripo is a premium wordpress theme for travel, tours, trips, adventures and a wide range of other tour agencies.</p>
+                <p><a href="mailto:needhelp@tripo.com">needhelp@tripo.com</a> <br> <a href="tel:888-999-0000">888 999 0000</a></p>
+                <div class="side-menu__social">
+                    <a href="#"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div><!-- /.side-menu__content -->
+        </div><!-- /.side-menu__block-inner -->
+    </div><!-- /.side-menu__block -->
+
+
+
+    <div class="search-popup">
+        <div class="search-popup__overlay custom-cursor__overlay">
+            <div class="cursor"></div>
+            <div class="cursor-follower"></div>
+        </div><!-- /.search-popup__overlay -->
+        <div class="search-popup__inner">
+            <form action="#" class="search-popup__form">
+                <input type="text" name="search" placeholder="Type here to Search....">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div><!-- /.search-popup__inner -->
+    </div><!-- /.search-popup -->
+
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/TweenMax.min.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
+    <script src="assets/js/typed-2.0.11.js"></script>
+    <script src="assets/js/vegas.min.js"></script>
+    <script src="assets/js/jquery.validate.min.js"></script>
+    <script src="assets/js/bootstrap-select.min.js"></script>
+    <script src="assets/js/countdown.min.js"></script>
+    <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="assets/js/bootstrap-datepicker.min.js"></script>
+    <script src="assets/js/nouislider.min.js"></script>
+    <script src="assets/js/isotope.js"></script>
+
+    <!-- template scripts -->
+    <script src="assets/js/theme.js"></script>
+</body>
+</html>

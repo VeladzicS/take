@@ -1,0 +1,247 @@
+<html>
+    <head>
+        <style>
+    :root {
+  --sidebar-width: 300px;
+  --toggler-size: 40px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 0.8rem;
+}
+
+.wrapper {
+  padding-left: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+  background: AliceBlue;
+  display: flex;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+  padding-left: 250px;
+}
+
+.sidebar {
+  z-index: 1000;
+  position: fixed;
+  right: 0px;
+  width: 0;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  background: linear-gradient(to bottom right, Tomato, Wheat);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  
+}
+#wrapper.toggled .sidebar{
+    margin-left: 250px;
+}
+.input-toggler:checked ~ .sidebar {
+  opacity: .9;
+  transform: translateX(0);
+  background-position: 0 0;
+}
+
+.content, .content div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.content div[id] {
+  display: none;
+}
+
+.menu {
+  list-style-type: none;
+}
+
+.menu__link {
+  color: white;
+  font-weight: 100;
+  text-decoration: none;
+  font-size: 3rem;
+  line-height: 5rem;
+  
+}
+
+.menu__link:hover,
+.menu__link:focus,
+.menu__link:active {
+  color: Gold;
+}
+
+.menu-toggler {
+  display: block;
+  width: var(--toggler-size);
+  height: var(--toggler-size);
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+
+
+.menu-toggler__line {
+  height: calc(var(--toggler-size) / 5);
+  background: Tomato;
+  position: absolute;
+  left: 0;
+  right: 0;
+  transition-property: transform, opacity;
+  transition-duration: .5s, .25s;
+  transition-delay: 0s, .5s;
+  animation-name: slidein;
+  animation-duration: .5s;
+  animation-iteration-count:1;
+  animation-timing-function: ease-out;
+}
+
+.input-toggler:checked ~ .menu-toggler .menu-toggler__line {
+  transition-delay: .25s, 0s;
+}
+
+
+.menu-toggler__line:nth-child(2) {
+  top: calc(var(--toggler-size) / 5 * 2);
+animation-duration: .6s;
+}
+
+.menu-toggler__line:nth-child(3) {
+  top: calc(var(--toggler-size) / 5 * 4);
+    animation-duration:.7s;
+}
+
+.input-toggler {
+  display: none;
+
+}
+
+.input-toggler:checked ~ .menu-toggler .menu-toggler__line {
+  background: Wheat;
+}
+
+.input-toggler:checked ~ .menu-toggler .menu-toggler__line:nth-child(1) {
+  transform: translateY(calc(var(--toggler-size) / 5 * 2)) rotate(45deg);
+}
+
+.input-toggler:checked ~ .menu-toggler .menu-toggler__line:nth-child(2) {
+  opacity: 0;
+}
+
+.input-toggler:checked ~ .menu-toggler .menu-toggler__line:nth-child(3) {
+  transform: translateY(calc(var(--toggler-size) / 5 * -2)) rotate(-45deg);
+}
+
+
+
+
+@keyframes slidein {
+  from {left: -200%; right:200%;}
+  to {left: 0; right: 0;}
+}
+        </style>
+    </head>
+    <body>
+        <div class="wrapper" class="toggled">
+            <input type="checkbox" id="menuToggler" class="input-toggler" />
+            <label for="menuToggler" class="menu-toggler">
+              <span class="menu-toggler__line"></span>
+              <span class="menu-toggler__line"></span>
+              <span class="menu-toggler__line"></span>
+            </label>
+            <aside class="sidebar">
+              <ul class="menu">
+                <li class="menu__item"><a class="menu__link" href="#Home">Home</a></li>
+                <li class="menu__item"><a class="menu__link" href="#Blog">Blog</a></li>
+                <li class="menu__item"><a class="menu__link" href="#Portfolio">Portfolio</a></li>
+                <li class="menu__item"><a class="menu__link" href="#About">About</a></li>
+                <li class="menu__item"><a class="menu__link" href="#Contact">Contact</a></li>
+              </ul>
+            </aside>
+            <main class="content">
+              <div>
+                <h1>CSS sidebar toggle</h1>
+                <p>Pure CSS solution for hiding and showing sidebar.</p>
+              </div>
+              <div id="Home">
+                <h1>Home</h1>
+                <p>This is the home page.</p>
+              </div>
+              <div id="Blog">
+                <h1>Blog</h1>
+                <p>This is the blog page.</p>
+              </div>
+              <div id="Portfolio">
+                <h1>Portfolio</h1>
+                <p>This is the portfolio page.</p>
+              </div>
+               <div id="About">
+                <h1>About</h1>
+                <p>This is the about page.</p>
+              </div>
+               <div id="Contact">
+                <h1>Contact</h1>
+                <p>This is the contact page.</p>
+              </div>
+            </main>
+          </div>
+          <script>
+              // Hide the contents until the burger menu finishes sliding in from the left
+var content = document.getElementsByTagName("main")[0];
+content.style.visibility = "hidden";
+
+var sidebar = document.getElementsByClassName("sidebar")[0];
+
+var lowerLayerBurger = document.getElementsByClassName("menu-toggler__line")[2];
+lowerLayerBurger.addEventListener("animationend", function(evt) {
+  content.style.visibility = "visible";
+});
+
+// Add click listeners to the menu on the sidebar
+document.getElementsByTagName("ul")[0].addEventListener("click", function(evt) {
+  // when a menu item is clicked hide the sidebar by unchecking the input
+  document.getElementById("menuToggler").checked = false;
+
+  function handleTransitionEnd(transitionEvent) {
+    
+    // show the correct content based on the target of the menu item
+    // first hide everything
+    var contentDivs = document.querySelectorAll("main div");
+    for (var i = 0; i < contentDivs.length; i++) {
+      contentDivs[i].style.display = "none";
+    }
+
+    // show the correct div
+    var contentId = evt.srcElement.hash;
+    var contentDiv = document.getElementById(contentId.substr(1));
+    contentDiv.style.display = "inherit";
+    
+    // remove listener
+    sidebar.removeEventListener("transitionend", handleTransitionEnd);
+  }
+  
+  sidebar.addEventListener("transitionend", handleTransitionEnd);
+});
+          </script>
+    </body>
+</html>

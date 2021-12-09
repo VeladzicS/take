@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>SOC</title>
+
+        <style>
+            html{
+                font-size: 100%;
+            }
+            body{
+                margin: 60px;
+                font-family: Barlow;
+                line-height: 1.5em;
+            }
+            #site_wrap{
+                height: 100vh;
+                display: grid;
+                grid-template-columns: 
+                    1fr
+                    1fr
+                ;
+                grid-gap: 24px;
+                grid-template-rows: 
+                   1fr
+                   1fr;
+                grid-template-areas: 
+                    "image content"
+
+            }
+
+            .image{
+                grid-area: image;
+            }
+
+            .content{
+                grid-area: content;
+            }
+
+            @media screen and (max-width:480px) {
+
+                body{
+                    margin: 0px;
+                }
+
+                .content{
+                    grid-area: content;
+                    margin-left: 35px;
+                    margin-right: 35px;
+                    margin-top: 35px;
+                   
+                }
+
+                .content hr{
+                    color: #FB9D22;
+                    border: 1px solid;
+                }
+
+                .image{
+                    grid-area: image;
+                    display: flex;
+                    margin-bottom: 0px;
+                }
+
+                #site_wrap{
+                    grid-template-areas: 
+                    "image images"
+                    "content content";
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="site_wrap">
+            <div class="image">
+                <img src="assets/images/foto/vito-drstva(23).JPG" alt="vito-drstva"; style="width:1440px;height:960px;" >
+            </div>
+            <div class="content">
+                    <p class="slideNumber" style="color: #366E56; font-size: 2em;" >1/10</p>
+                <hr class="lineOne" style="border: 1px solid; color:#366E56;">
+                    <p class="photoTitle" style="color: #366E56; font-size: 26px;">Photo title</p>
+                    <p class="shortDescription" style="color: #366E56; font-size: 18px;">Short description. Lorem ipsum dolor sit amet, consetetur sadipetur scing elitr, sed diam nonumy eirmod tempor et invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam con at justo duo dolores et ea rebum. Stet clita kasdenar gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                <hr style="border: 1px solid; color:#558D75;">
+                    <p class="photoBy" style="color: #676768; font-size: 18px;">Photo: © Sarajevo Outdoor City</p>
+                
+            </div>
+
+        </div>
+    </body>
+</html>
