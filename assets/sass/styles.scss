@@ -90,3 +90,96 @@
   font-size: 24px;
   font-weight: bold;
 }
+
+
+.testimonials__two {
+  padding: 75px 0 0 0;
+  margin-bottom: -165px;
+
+  @media ( max-width: 768px){
+    padding: 35px 0 0 0;
+    margin-bottom: 0;
+  }
+  &--inner {
+    height: 550px;
+    width: 100%;
+    background: url("../images/foto/SOC_23.jpg")center/cover no-repeat;
+
+    @media ( max-width: 768px){
+      height: 332px;
+    }
+
+
+
+  }
+
+  .testimonials-slick {
+    transform: translateY(-99%);
+    width: 400px;
+    background: white;
+    margin-left: 75px;
+    margin-bottom: 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    position: relative;
+    @media ( max-width: 768px){
+      transform: translateY(-15%);
+      margin-left: 25px;
+      margin-right: 25px;
+      width: auto;
+    }
+    .single-slick {
+      padding: 35px 50px 50px 50px;
+      @media ( max-width: 768px){
+        padding: 25px 35px 35px 35px;
+      }
+      img {
+        margin-bottom: 15px;
+        width: 40px;
+        height: auto;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 20px;
+        color: #676768;
+        font-weight: 400;
+        font-family: 'Barlow Condensed', sans-serif;
+      }
+
+      h4 {
+        font-size: 16px;
+        font-weight: bold;
+
+        span {
+          font-weight: normal;
+        }
+      }
+
+    }
+
+    .slick-dots {
+      position: absolute;
+      bottom: 0;
+      left: 50px;
+      width: auto;
+      @media ( max-width: 768px){
+        bottom: unset;
+        left: unset;
+        top: 15px;
+        right: 15px;
+      }
+      li {
+        button {
+          &:before {
+            content: "";
+            background: #FB9D22;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}
